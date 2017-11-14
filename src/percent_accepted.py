@@ -5,10 +5,10 @@ import os
 
 if __name__ == "__main__":
     results = {}
-    for filename in tqdm(os.listdir("../data/percent_answered")):
+    for filename in tqdm(os.listdir("../data/percent_accepted")):
         language = filename.split(".")[0]
         answered = []
-        with open("../data/percent_answered/" + filename, 'r') as f:
+        with open("../data/percent_accepted/" + filename, 'r') as f:
             for line in f:
                 if line.startswith("Id"):
                     continue
